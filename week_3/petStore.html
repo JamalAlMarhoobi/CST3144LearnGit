@@ -54,6 +54,11 @@
                     <input v-model.trim="order.lastName" />
                 </p>
                 <p>
+                    <strong>Phone Number:</strong>
+                    <!-- This input field is bound to 'phoneNumber' in the 'order' object -->
+                    <input v-model.number.trim="order.phoneNumber" />
+                </p>
+                <p>
                     <strong>Address:</strong> <input v-model.trim="order.address" />
                 </p>
                 <p>
@@ -82,6 +87,7 @@
                 <h2>Order Information</h2>
                 <p>First Name: {{order.firstName}}</p>
                 <p>Last Name: {{order.lastName}}</p>
+                <p>Phone Number: {{order.phoneNumber}}</p>
                 <p>Address: {{order.address}}</p>
                 <p>City: {{order.city}}</p>
                 <p>State: {{order.state}}</p>
@@ -102,6 +108,7 @@
                 order: {
                     firstName: '',
                     lastName: '',
+                    phoneNumber: '',
                     address: '',
                     city: '',
                     zip: '',
