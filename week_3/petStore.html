@@ -89,6 +89,7 @@
                 <p>Zip: {{order.zip}}</p>
                 <p>Gift?: {{order.gift}}</p>
                 <p>Method: {{order.method}}</p>
+                <button v-on:click="submitForm">Place Order</button>
             </div>
         </main>
     </div>
@@ -125,7 +126,8 @@
                 },
                 showCheckout() {
                     this.showProduct = this.showProduct ? false : true;
-                }
+                },
+                submitForm() {alert('Order submitted!')}
             },
             computed: { // the Computed Property object
                 cartItemCount: function () { // the property name
