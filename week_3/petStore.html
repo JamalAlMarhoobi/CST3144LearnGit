@@ -63,10 +63,8 @@
                     <strong>State:</strong>
                     <select v-model="order.state">
                         <option disabled value="">State</option>
-                        <option>AL</option>
-                        <option>AR</option>
-                        <option>CA</option>
-                        <option>NV</option>
+                        <option v-for="(state, key) in states" v-bind:value="state">
+                            {{key}}</option>
                     </select>
                 </p>
                 <p>
@@ -121,7 +119,13 @@
                     image: "images/download.jpeg",
                     availableInventory: 5
                 },
-                cart: [] // array to store items in shopping cart
+                cart: [], // array to store items in shopping cart
+                states: {
+                    AL: 'Alabama',
+                    AR: 'Arizona',
+                    CA: 'California',
+                    NV: 'Nevada'
+                }
             },
             methods: {
                 addToCart: function () {
