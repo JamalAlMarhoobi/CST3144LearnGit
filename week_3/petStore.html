@@ -56,6 +56,10 @@
                 <h2>Order Information</h2>
                 <p>First Name: {{order.firstName}}</p>
                 <p>Last Name: {{order.lastName}}</p>
+                <p>Address: {{order.address}}</p>
+                <p>City: {{order.city}}</p>
+                <p>Zip: {{order.zip}}</p>
+                <p>State: {{order.state}}</p>
                 <p>
                     <strong>Address:</strong> <input v-model="order.address" />
                 </p>
@@ -87,7 +91,11 @@
                 sitename: 'Vue.js Pet Depot',
                 order: {
                     firstName: '',
-                    lastName: ''
+                    lastName: '',
+                    address: '',
+                    city: '',
+                    zip: '',
+                    state: ''
                 },
                 product: {
                     id: 1001,
