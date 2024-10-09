@@ -79,7 +79,14 @@
                 <p>City: {{order.city}}</p>
                 <p>Zip: {{order.zip}}</p>
                 <p>State: {{order.state}}</p>
-                
+                <p><input type="checkbox" id="gift" value="true" v-model="order.gift">
+                    <label for="gift">Ship As Gift?</label>
+                </p>
+                <p><input type="radio" id="home" value="Home" v-model="order.method">
+                    <label for="home">Home</label>
+                    <input type="radio" id="business" value="Business" v-model="order.method">
+                    <label for="business">Business</label>
+                </p>
             </div>
         </main>
     </div>
@@ -96,7 +103,9 @@
                     address: '',
                     city: '',
                     zip: '',
-                    state: ''
+                    state: '',
+                    method: 'Home',
+                    gift: false
                 },
                 product: {
                     id: 1001,
